@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* font-family: 'Chakra Petch', sans-serif;
+font-family: 'Fredoka One', cursive; */
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #332FD0;
+    font-family: 'Chakra Petch', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*ERROR MESSAGE*/
+
+#errorDisplay {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: rgb(243, 83, 144);
+    font-size: 20px;
+    font-weight: 800;
+    word-spacing: 5px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.288);
+    cursor:default;
+}
+
+
+/*HEADER*/
+
+.memeMakerHeader {
+    border: #6EDCD9;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto 4vh auto;
+    padding: 10px;
+    text-align: center;
+    width: 80vh;
+    height: auto;
+    top: 0;
+}
+
+.memeMakerHeader:hover {
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.288);
+}
+
+.memeMakerHeader h1 {
+    color: #FFD124;
+    font-family: 'Fredoka One', cursive;
+    font-size: 100px;
+    text-shadow: 2px 6px rgba(0, 0, 0, 0.384);
+}
+
+.memeMakerHeader p {
+    color: #6EDCD9;
+    font-size: 23px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.384);
+}
+
+/*FORM*/
+
+#formContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+#formContainer #form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    text-emphasis: center;
+}
+
+#formContainer #form #upload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px 20px 10px;
+}
+
+#formContainer #form #upload label {
+    padding: 10px;
+    margin: 10px auto;
+    font-weight: bold;
+    color: #FFD124;
+    font-size: 30px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.384);
+}
+
+#formContainer #form #upload #chooseFile {
+    display: none;
+}
+
+#formContainer #form #upload #filePath {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#formContainer #form #upload label {
+    cursor: pointer;
+}
+
+#formContainer #form #upload label:hover {
+    background-color: #FFD124;
+    color: #332FD0;
+    border-radius: 5px;
+}
+
+#formContainer #form input {
+    width: 200px;
+    height: 30px;
+}
+
+#formContainer #form #yourText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+#formContainer #form #yourText label {
+   margin: 0 auto 20px auto;
+   color: #6EDCD9;
+   font-size: 22px;
+}
+
+#formContainer #form #yourText input {
+    padding: 5px;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: none;
+    margin: 5px auto 10px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+}
+
+#formContainer #form #button {
+    background-color: #FFD124;
+    border-radius: 5px;
+    border-color: #6EDCD9;
+    margin-top: 10px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#formContainer #form #button:hover {
+   box-shadow: 2px 4px rgba(0, 0, 0, 0.623);
+   font-weight: bold;
+}
+
+/*FOOTER*/
+
+#footer {
+    margin-top: auto;
+    display: block;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+
+#footer p {
+    color: #6EDCD9;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#footer a {
+    color: #6EDCD9;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: #FFD124;
+}
+
+/* MEDIA RESIZING */
+
+@media all and (max-width: 990px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .memeMakerHeader {
+        top: 0;
+        width: auto;
+        margin-top: 0;
+    }
+
+    .memeMakerHeader h1 {
+        font-size: 50px;
+    }
+
+    .memeMakerHeader p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #formContainer #form {
+        width: 80%;
+    }
+
+    #formContainer #form #upload {
+        height: 150px;
+    }
+
+    #formContainer #form #upload label {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #formContainer #form #yourText label {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #formContainer #form #yourText input {
+        height: 35px;
+    }
+
+    #footer {
+        bottom: 0;
+        height: 70px;
+    }
+
+    #footer p {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-height: 800px) {
+    .memeMakerHeader {
+        margin-top: 5px;
+        height: 200px;
+    }
+
+    .memeMakerHeader h1 {
+        font-size: 70px;
+    }
+}

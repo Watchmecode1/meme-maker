@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="meme, gif, image">
+    <meta name="description" content="Free Meme Maker">
+    <title>Meme Maker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAbxdEA6xc7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREAAQEQEAAREQABARAQABERAAEAABAAEREAAQAAEAAREQABARAQABERAAERERAAEREAARABEAAREQABAAAQABERAAEAABAAEREAAAAAAAARERAAARAAAREREQAREQAREREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+</head>
+    <body>
+        <header>
+            <div class="memeMakerHeader">
+                <h1>Meme Maker</h1>
+                <p>Make your own meme with any GIF or image you like!</p>
+            </div>
+        </header>
+        <div id="errorDisplay" th:if="${exception}">
+            <p th:text="${exception}"></p>
+        </div>
+        <div id="formContainer">
+            <form id="form" method="POST" enctype="multipart/form-data" action="/">
+                <div id="upload">
+                    <label for="chooseFile">
+                        Click here to select your GIF or image
+                        <input id="chooseFile" type="file" name="file" accept=".gif, .jpg, .jpeg, .png" required/>
+                        <p id="filePath"></p>
+                    </label>
+                </div>
+                <div id="yourText">
+                    <label for="topText">Add your top and bottom text</label>
+                    <input type="text" id="topText" name="topText" placeholder="Top text"/>
+                    <input type="text" id="bottomText" name="bottomText" placeholder="Bottom text"/>
+                </div>
+                <input id="button" type="submit" value="Upload"/>
+            </form>
+        </div>
+        <footer id="footer">
+                <p>Created by <a href="https://github.com/Watchmecode1" target="_blank">Matthew Mazzotta</a> • Styled by <a href="https://github.com/underneathestars" target="_blank">Federica Centorbi</a></p>
+        </footer>
+    </body>
+    <script>
+        const chooseFile = document.querySelector("#chooseFile");
+        const filePath = document.querySelector("#filePath");
+        chooseFile.addEventListener("change", () => {
+            filePath.innerHTML = chooseFile.value;
+        })
+    </script>
+</html>
