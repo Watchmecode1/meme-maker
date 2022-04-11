@@ -33,7 +33,7 @@ import java.util.Objects;
  */
 public class Meme {
 
-    private static final Font DEFAULT_FONT = new Font("Arial", Font.BOLD, 40);
+    private static final Font DEFAULT_FONT = new Font("Arial", Font.BOLD, 65);
 
     enum Position { TOP, BOTTOM }
 
