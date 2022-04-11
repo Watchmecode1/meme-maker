@@ -258,6 +258,38 @@ body {
     }
 
     .memeMakerHeader h1 {
-        font-size: 70px;
+        font-size: 80px;
     }
+}
+
+@media (min-width: 280px) and (max-width: 990px) {
+  
+    .memeMakerHeader h1 {
+        font-size: 45px;
+    }
+    
+    .memeMakerHeader p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    #formContainer #form {
+        width: 100%;
+    }
+
+    #formContainer #form #upload label {
+        font-size: 20px;
+    }
+
+    #formContainer #form #yourText label {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    #formContainer #form #yourText input {
+        font-size: 20px;
+        height: 35px;
+        width: 90%;
+    }
+
 }
