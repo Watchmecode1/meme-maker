@@ -51,4 +51,9 @@ public class MemeController {
             throw new UnsupportedFileFormat();
         }
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "test";
+    }
 }
