@@ -41,4 +41,4 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         run: |
           eb deploy ${{ secrets.EB_ENV_NAME }}
-          eb setenv PORT=8080
+          eb setenv ${{ secrets.EB_ENV_NAME }} PORT=8080
